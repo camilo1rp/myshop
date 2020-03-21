@@ -3,9 +3,9 @@
 Checkout
 {% endblock %}
 {% block content %}
-<h1>Checkout</h1>
+<h1>Realizar pedido</h1>
 <div class="order-info">
-    <h3>Your order</h3>
+    <h3>Tu Pedido</h3>
     <ul>
         {% for item in cart %}
         <li>
@@ -14,11 +14,17 @@ Checkout
         </li>
         {% endfor %}
     </ul>
-    <p>Total: ${{ cart.get_total_price }}</p>
+    <p>Total: ${{ cart.get_total_price }}*</p>
+
+
+        <span style="background:#ffff90;padding:3px;">*Costo de envio no incluido. Al hacer click en<strong> Hacer pedido </strong>seras contactado por telefono/whatsapp para confirmar tu pedido.
+            No te preocupes si cambias de opinion<strong> Puedes retractarte </strong> cuando te contactemos.
+        </span>
+
 </div>
 <form action="." method="post" class="order-form">
     {{ form.as_p }}
-    <p><input type="submit" value="Place order"></p>
+    <p><input type="submit" value="Hacer pedido"></p>
     {% csrf_token %}
 </form>
 {% endblock %}

@@ -8,11 +8,13 @@ class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
-    address = models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=200)
-    city = models.CharField(max_length=100)
+    phone = models.BigIntegerField()
+    address = models.CharField(max_length=250, null=True, blank=True)
+    #postal_code = models.CharField(max_length=200)
+    #city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    send = models.BooleanField(default=True)
     paid = models.BooleanField(default=True)
 
     class Meta:

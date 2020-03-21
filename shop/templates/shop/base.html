@@ -1,33 +1,51 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}My shop{% endblock %}</title>
+    <title>{% block title %}Tapabocas GO {% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1/css/bootstrap.min.css' %}">
+    <!--fontawesome-->
+    <link href="{% static 'fontawesome-free-5.11.2-web/css/all.css' %}" rel='stylesheet'/>
+    <!--fontawesome-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo">My shop</a>
+        <a href="/" class="logo"><strong>Tapabocas GO</strong></a>
     </div>
     <div id="subheader">
         <div class="cart">
             {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
-                    Your cart:
+                    Tu carrito:
                     <a href="{% url "cart:cart_detail" %}">
-                    {{ total_items }} item{{ total_items|pluralize }},
-                    ${{ cart.get_total_price }}
+                    {{ total_items }} producto{{ total_items|pluralize }},
+                     ${{ cart.get_total_price }}
                     </a>
                     {% else %}
-                Your cart is empty.
+                Tu carrito esta vacio.
                 {% endif %}
             {% endwith %}
         </div>
+        <span>Ventas solo en la ciudad de <strong>Fusagasugá</strong></span>
     </div>
     <div id="content">
         {% block content %}
         {% endblock %}
     </div>
+    <div id="footer">
+        <span>El<strong> PAGO </strong>se realiza contra-entrega. Te lo llevemos a tu casa
+            o puedes recogerlo en nuestra fabrica. <strong>Direccion</strong> Transversal 12 # 30-30
+        </span>
+    </div>
+    <!--ajax.js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--ajax.js-->
+    <!--sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!--sweet alert-->
+    <script src="{% static 'bootstrap-4.4.1/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

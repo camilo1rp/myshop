@@ -23,8 +23,8 @@ a.button, input[type="submit"] {
     color:#fff;
     background:#5993bb;
     border-radius:4px;
-    padding:10px 20px;
-    font-size:14px;
+    padding:0.4rem 2rem;
+    font-size:1rem;
     border:0;
 }
 
@@ -48,10 +48,10 @@ table {
 }
 
 table th, table td {
-    text-align:left;
-    font-size:14px;
-    padding:10px;
-    margin:0;
+    text-align: left;
+    font-size: calc(12px + 0.8vw);
+    padding: 1vw;
+    margin: 0;
 }
 
 tbody tr:nth-child(odd) {
@@ -69,19 +69,19 @@ thead th, tbody tr.total {
 }
 
 table.cart {
-    margin-bottom:40px;
+    margin-bottom:1rem;
 }
 
 table.cart img {
-    width:180px;
+    width:12rem;
 }
 
 tbody td.num {
-    text-align:right;
+    text-align:center;
 }
 
 td input[type="submit"] {
-    font-size:12px;
+    font-size:calc(12px + 0.8vw);
     padding:4px 10px;
 }
 
@@ -96,8 +96,8 @@ form p label {
 }
 
 form p input {
-    width:300px;
-    font-size:13px;
+    width:20rem;
+    font-size:1rem;
     margin-bottom:10px;
     padding:10px 12px;
     border:0;
@@ -110,22 +110,39 @@ ul.errorlist {
    float:left;
    color:#ff0000;
    clear:both;
-   font-size:13px;
+   font-size:1rem;
    margin:0;
    padding:0;
 }
 
 
 #header {
-    padding:10px 100px;
-    font-size:18px;
+    padding:1rem 1rem;
+    font-size:calc(12px + 1.8vw);
     overflow:auto;
+    margin: 0 5vw;
 }
 
 #subheader {
-    background:#ececec;
+    background:#beddec;
     color:#444;
-    padding:15px 100px;
+    padding:1rem 1rem;
+    margin: 0 5vw;
+    overflow:auto;
+}
+
+#footer {
+    background:#3b474c;
+    color:white;
+    padding:1rem 1rem;
+    overflow:auto;
+    margin: 0 5vw;
+}
+
+#message {
+    background:#3b474c;
+    color:white;
+    padding:10px 10px;
     overflow:auto;
 }
 
@@ -133,23 +150,23 @@ ul.errorlist {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
-    font-size:22px;
+    font-size:2rem;
     margin-right:10%;
 }
 
 #subheader .cart {
     float:right;
-    padding-top:4px;
+    padding-top:2px;
 }
 
 #content {
-    padding:0 100px;
+    padding:0 8vw;
     overflow:hidden;
 }
 
 #sidebar {
-    width:220px;
-    padding:30px 20px 0 0;
+    width: 20vw;
+    padding:2rem 2rem 0 0;
     float:left;
 }
 
@@ -210,7 +227,7 @@ ul.errorlist {
 .product-detail img {
     width:40%;
     float:left;
-    padding:0 20px 20px 0;
+    padding:0 2vw 0 0;
 }
 
 .product-detail h1 {
