@@ -127,4 +127,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # key for storing cart info.
+CART_SESSION_ID = 'cart'
 
