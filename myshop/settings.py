@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_!w64n1tb7t(lm#&uq*s0hd8)p(4uqbz3@y(!412vfz3yqh6a3'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myshop', 'myshop:8080']
 
 
 # Application definition
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME','myshop'),
+        'USER': os.environ.get('DB_USER','myshop'),
+        'PASSWORD': os.environ.get('DB_PASSWORD',''),
+        'HOST': os.environ.get('DB_HOST',''),
+        'PORT': '5432',
     }
 }
 
@@ -128,4 +132,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # key for storing cart info.
 CART_SESSION_ID = 'cart'
+
+# ***** email settings *****
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
