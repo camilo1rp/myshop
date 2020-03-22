@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cea4e3b2-3339-4c8b-a798-29127dbbf15f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0002_auto_20200319_2106.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myshop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -26,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1ZMLR6hsS5X4kmGavK26GBrwcxZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584822351551</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added docker configuration">
+      <created>1584832374869</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584832374869</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -129,10 +134,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="412" y="201" width="598" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1584832153391" />
-    <state x="323" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1584822351282">
+    <state x="323" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1584838941043">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="323" y="27" width="777" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584822351282" />
+    <state x="323" y="27" width="777" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584838941043" />
+    <state x="187" y="86" width="1039" height="622" key="DiffContextDialog" timestamp="1584832345462">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="187" y="86" width="1039" height="622" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1584832345462" />
     <state x="494" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584644374179">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -141,10 +150,18 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584644380369" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584832390555">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584832390555" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1584672013666">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584672013666" />
+    <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584838872817">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1299.741@67.27.1299.741" timestamp="1584838872817" />
     <state x="243" y="152" width="916" height="522" key="find.popup" timestamp="1584820485195">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
