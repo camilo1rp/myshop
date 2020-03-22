@@ -66,22 +66,22 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
 
-  secrets:
-     django_superuser_mail:
-       file: secrets/django_superuser_mail.txt
-     django_superuser_password:
-       file: secrets/django_superuser_password.txt
-     db_password:
-       file: secrets/db_password.txt
-     secret_key:
-       file: secrets/secret_key.txt
-     email_host_user:
-       file: secrets/email_host_user.txt
-     email_host_password:
-       file: secrets/email_host_password.txt
+secrets:
+  django_superuser_mail:
+    file: secrets/django_superuser_mail.txt
+  django_superuser_password:
+    file: secrets/django_superuser_password.txt
+  db_password:
+    file: secrets/db_password.txt
+  secret_key:
+    file: secrets/secret_key.txt
+  email_host_user:
+    file: secrets/email_host_user.txt
+  email_host_password:
+    file: secrets/email_host_password.txt
 
 
-  volumes:
-     postgres-vol:
-     myshop-static-files:
-     myshop-media-files:
+volumes:
+  postgres-vol:
+  myshop-static-files:
+  myshop-media-files:
