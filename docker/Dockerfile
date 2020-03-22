@@ -36,7 +36,7 @@ RUN pip3 install -r requirements.txt
 
 FROM appBuild as entrypoint
 
-COPY docker-entrypoint.sh /docker-entrypoint.point.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod ug+x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
