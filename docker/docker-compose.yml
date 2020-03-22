@@ -1,10 +1,10 @@
-version '3.1'
+version: '3.1'
 
 services:
   postgres:
     image: postgres:9.6
-    container_name: postgres-myshop
-    environmnet:
+    container_name: postgres
+    environment:
       POSTGRESS_USER: myshop
       POSTGRESS_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: myshop
@@ -16,12 +16,12 @@ services:
 
   myshop:
     build: .
-    image: dev/myshop
+    image: prod/myshop
     container_name: myshop
-    envionment:
+    environment:
       DJANGO_SUPERUSER_NAME: myshopadmin
       DJANGO_SUPERUSER_MAIL: /run/secrets/django_superuser_mail
-      DJANGO_SUPERUSERT_PASS: /run/secrets/djnago_superuser_password
+      DJANGO_SUPERUSER_PASS: /run/secrets/django_superuser_password
       ALLOWED_HOST: localhost
       DB_NAME: myshop
       DB_USER: myshop
@@ -39,7 +39,7 @@ services:
       - email_host_password
     volumes:
       - myshop-media-files:/opt/myshop/media/
-      - myshop-stati-files:/opt/myshop/static/
+      - myshop-static-files:/opt/myshop/static/
 
 
   nginx:

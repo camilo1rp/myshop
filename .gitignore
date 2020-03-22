@@ -2,3 +2,5 @@
 /.idea/
 /.idea/workspace.xml
 /media/products/2020/03/
+/docker/id_rsa
+*/secrets/
