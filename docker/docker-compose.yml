@@ -46,7 +46,7 @@ services:
     image: nginx:1.17.8-alpine
     links:
       - myshop
-    container_name: nginx-myshop
+    container_name: nginx_myshop
     depends_on:
       - myshop
     ports:
