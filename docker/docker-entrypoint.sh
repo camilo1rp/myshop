@@ -11,7 +11,7 @@ export EMAIL_HOST_PASSWORD=$(cat /run/secrets/email_host_password)
 
 
 # run db migrations (retry on error)
-while ! python3 /opt/myshop/manage.py migrate 2>&1l; do
+while ! python3 /opt/myshop/manage.py migrate 2>&1; do
   sleep 5
 done
 
@@ -35,7 +35,7 @@ else
 
 python3 /opt/myshop/manage.py shell << END
 from django.contrib.auth.models import User
-if not User.objects.filter(username='${DJANGO_SUPERUSER_NAME}');
+if not User.objects.filter(username='${DJANGO_SUPERUSER_NAME}'):
   u=User.objects.create_superuser('${DJANGO_SUPERUSER_NAME}', '${DJANGO_SUPERUSER_MAIL}', '${DJANGO_SUPERUSER_PASSWORD}')
 END
   echo "Superuser Username: ${DJANGO_SUPERUSER_NAME}, E-mail: ${DJANGO_SUPERUSER_MAIL}"

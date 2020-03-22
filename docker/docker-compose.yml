@@ -1,3 +1,4 @@
+
 version: '3.1'
 
 services:
@@ -5,8 +6,8 @@ services:
     image: postgres:9.6
     container_name: postgres
     environment:
-      POSTGRESS_USER: myshop
-      POSTGRESS_PASSWORD_FILE: /run/secrets/db_password
+      POSTGRES_USER: myshop
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: myshop
     volumes:
       - postgres-vol:/var/lib/postgresql/data
@@ -21,7 +22,7 @@ services:
     environment:
       DJANGO_SUPERUSER_NAME: myshopadmin
       DJANGO_SUPERUSER_MAIL: /run/secrets/django_superuser_mail
-      DJANGO_SUPERUSER_PASS: /run/secrets/django_superuser_password
+      DJANGO_SUPERUSER_PASSWORD: /run/secrets/django_superuser_password
       ALLOWED_HOST: localhost
       DB_NAME: myshop
       DB_USER: myshop
@@ -67,22 +68,22 @@ services:
       - ./data/certbot/www:/var/www/certbot
 
 
-  secrets:
-    django_superuser_mail:
-      file: secrets/django_superuser_mail.txt
-    django_superuser_password:
-      file: secrets/django_superuser_password.txt
-    db_password:
-      file: secrets/db_password.txt
-    secret_key:
-      file: secrets/secret_key.txt
-    email_host_user:
-      file: secrets/email_host_user.txt
-    email_host_password:
-      file: secrets/email_host_password.txt
+secrets:
+   django_superuser_mail:
+     file: secrets/django_superuser_mail.txt
+   django_superuser_password:
+     file: secrets/django_superuser_password.txt
+   db_password:
+     file: secrets/db_password.txt
+   secret_key:
+     file: secrets/secret_key.txt
+   email_host_user:
+     file: secrets/email_host_user.txt
+   email_host_password:
+     file: secrets/email_host_password.txt
 
 
-  volumes:
-    postgres-vol:
-    myshop-static-files:
-    myshop-media-files:
+volumes:
+   postgres-vol:
+   myshop-static-files:
+   myshop-media-files:
