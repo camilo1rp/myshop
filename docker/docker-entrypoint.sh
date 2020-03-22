@@ -20,13 +20,13 @@ if [ "$DJANGO_SKIP_SUPERUSER" == "true" ]; then
   echo "↩️ Skip creating the superuser"
 else
   if [ -z ${DJANGO_SUPERUSER_NAME+x} ]; then
-    DJANGO_SUPERUSER_PASSWORD='admin'
+    DJANGO_SUPERUSER_NAME='admin'
   fi
   if [ -z ${DJANGO_SUPERUSER_MAIL+x} ]; then
     DJANGO_SUPERUSER_MAIL='admin@example.com'
   fi
   if [ -z ${DJANGO_SUPERUSER_PASSWORD+x} ]; then
-    if [ -f "/run/secrets/django_super_password" ]; then
+    if [ -f "/run/secrets/django_superuser_password" ]; then
       DJANGO_SUPERUSER_PASSWORD=$DJANGO_SUPERUSER_PASSWORD
     else
       DJANGO_SUPERUSER_PASSWORD='admin'
