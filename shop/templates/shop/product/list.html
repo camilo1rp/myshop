@@ -44,3 +44,20 @@
     </div>
 </div>
 {% endblock %}
+{% block script %}
+<script>
+$(document).ready(function(){
+    Swal.fire({
+  title: '<strong>Quedate en casa</strong>',
+  icon: 'info',
+  html:
+    'Con cada compra <b>contribuyes</b>, ' +
+    'pare que otro/a fusagasugeño/a este protegido.<b>Donaremos</b> la misma cantidad que compres!',
+  focusConfirm: true,
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> Genial!',
+  confirmButtonAriaLabel: 'manito arriba, genial!',
+})
+})
+</script>
+{% endblock %}
