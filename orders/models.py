@@ -7,7 +7,7 @@ from shop.models import Product
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    email = models.EmailField()
+    email = models.EmailField(null=True, blank=True)
     phone = models.BigIntegerField()
     address = models.CharField(max_length=250, null=True, blank=True)
     #postal_code = models.CharField(max_length=200)
@@ -15,7 +15,8 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     send = models.BooleanField(default=True)
-    paid = models.BooleanField(default=True)
+    paid = models.BooleanField(default=False)
+    delivered = models.BooleanField(default=False)
 
     class Meta:
         ordering = ('-created',)
