@@ -10,15 +10,15 @@
     <div class="col-sm-12 col-md-4">
         <hr>
         <h3>Categorías</h3>
-            <li {% if not category %}class="btn btn-primary btn-block"
-                {%else%}class="btn btn-secondary btn-block"{% endif %}>
-                <a href="{% url 'shop:product_list' %}" style="color:white;">Todas</a>
-            </li>
+            <a href="{% url 'shop:product_list' %}" style="color:white;" {% if not category %}
+               class="btn btn-primary btn-block"{%else%}
+               class="btn btn-secondary btn-block"{% endif %}>Todas</a>
+
             {%for c in categories %}
-                <li {% if category.slug == c.slug %}class="btn btn-primary btn-block"
-                    {%else%}class="btn btn-secondary btn-block"{% endif %}>
-                    <a href="{{ c.get_absolute_url }}" style="color:white;">{{ c.name}}</a>
-                </li>
+                <a href="{{ c.get_absolute_url }}" style="color:white;" {% if category.slug == c.slug %}
+                   class="btn btn-primary btn-block"{%else%}
+                   class="btn btn-secondary btn-block"{% endif %}>{{ c.name}}</a>
+
             {% endfor %}
     </div>
     <div id="main" class="col-sm-12 col-md-8">
