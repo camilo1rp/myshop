@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Tapabocas GO {% endblock %}</title>
+    <title>{% block title %}Tapabocas GO{% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'bootstrap-4.4.1/css/bootstrap.min.css' %}">
     <!--fontawesome-->
@@ -13,22 +13,22 @@
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo"><strong>Tapabocas GO</strong> <img src="{% get_media_prefix %}logo-go.png" height="30"> </a>
+        <a href="/" class="logo"><strong>Tapabocas GO</strong> <img src="{% get_media_prefix %}logo-go.png" height="25"> </a>
 
-        <img class="float-right" src="{% get_media_prefix %}logo_mt.jpeg" height="48">
+        <img class="float-right" src="{% get_media_prefix %}logo_mt.jpeg" height="40">
     </div>
     <div id="subheader">
         <div class="cart col-6 ">
             {% with total_items=cart|length %}
             <div class="float-right">
                 {% if cart|length > 0 %}
-                    Tu carrito:
+                Tu carrito<i class="fas fa-shopping-cart"></i>:
                     <a href="{% url "cart:cart_detail" %}">
                     {{ total_items }} producto{{ total_items|pluralize }},
                      ${{ cart.get_total_price }}
                     </a>
                     {% else %}
-                Tu carrito esta vacio.
+                Tu carrito esta vacio. <i class="fas fa-shopping-cart"></i>
                 {% endif %}
             </div>
             {% endwith %}
