@@ -25,7 +25,7 @@
         <h1>{% if category %}{{ category.name}}{% else %}Productos{% endif %}</h1>
         <div class="row">
         {%for product in products %}
-        <div class="col-md-6 col-sm-6 px-2">
+        <div class="col-md-6 col-sm-6 px-3">
         <div class="card" style="width: 18rem;">
             <a href="{{ product.get_absolute_url }}">
             <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}

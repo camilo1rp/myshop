@@ -147,7 +147,7 @@ ul.errorlist {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
-    font-size:1.8rem;
+    font-size:calc(10px + 3vw);
     margin-right:10%;
 }
 
