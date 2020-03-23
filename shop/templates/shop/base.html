@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Tapabocas GO {% endblock %}</title>
@@ -13,11 +13,14 @@
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo"><strong>Tapabocas GO</strong></a>
+        <a href="/" class="logo"><strong>Tapabocas GO</strong> <img src="{% get_media_prefix %}/logo-go.png" height="50"> </a>
+
+        <img class="float-right" src="{% get_media_prefix %}/logo_mt.jpeg" height="50">
     </div>
     <div id="subheader">
-        <div class="cart">
+        <div class="cart col-6 ">
             {% with total_items=cart|length %}
+            <div class="float-right">
                 {% if cart|length > 0 %}
                     Tu carrito:
                     <a href="{% url "cart:cart_detail" %}">
@@ -27,17 +30,21 @@
                     {% else %}
                 Tu carrito esta vacio.
                 {% endif %}
+            </div>
             {% endwith %}
         </div>
+        <div class="col-6">
         <span>Ventas solo en la ciudad de <strong>Fusagasugá</strong></span>
+        </div>
     </div>
     <div id="content">
         {% block content %}
         {% endblock %}
     </div>
     <div id="footer">
+        <span></span><img class="float-right" src="{% get_media_prefix %}/lafayette_nbg.png" height="40"></span>
         <span>El<strong> PAGO </strong>se realiza contra-entrega. Te lo llevemos a tu casa
-            o puedes recogerlo en nuestra fabrica. <strong>Direccion</strong> Transversal 12 # 30-30
+        o puedes recogerlo en nuestra fabrica.<br> <strong>Dirección:</strong>Transversal 12 # 16B - 32. Cerca Clincia Belen
         </span>
     </div>
     <!--ajax.js-->
@@ -47,5 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!--sweet alert-->
     <script src="{% static 'bootstrap-4.4.1/js/bootstrap.min.js' %}"></script>
+{% block script %}
+{% endblock %}
 </body>
 </html>

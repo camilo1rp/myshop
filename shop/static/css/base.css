@@ -21,13 +21,33 @@ a:hover {
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
     border-radius:4px;
     padding:0.4rem 2rem;
     font-size:1rem;
     border:0;
 }
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
 
+::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
 a.button.light {
     color:#666;
     background:#ededed;
@@ -45,12 +65,13 @@ table {
     width:100%;
     border-spacing:0;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 table th, table td {
     text-align: left;
     font-size: calc(12px + 0.8vw);
-    padding: 1vw;
+    padding: 0.5vw;
     margin: 0;
 }
 
@@ -68,10 +89,6 @@ thead th, tbody tr.total {
     font-weight:bold;
 }
 
-table.cart {
-    margin-bottom:1rem;
-}
-
 table.cart img {
     width:12rem;
 }
@@ -85,26 +102,6 @@ td input[type="submit"] {
     padding:4px 10px;
 }
 
-form p label, form p input {
-    float:left;
-    clear:both;
-}
-
-form p label {
-    font-size:14px;
-    padding-bottom:4px;
-}
-
-form p input {
-    width:20rem;
-    font-size:1rem;
-    margin-bottom:10px;
-    padding:10px 12px;
-    border:0;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
-}
 
 ul.errorlist {
    float:left;
@@ -126,7 +123,7 @@ ul.errorlist {
 #subheader {
     background:#beddec;
     color:#444;
-    padding:1rem 1rem;
+    padding:1rem 0rem;
     margin: 0 5vw;
     overflow:auto;
 }

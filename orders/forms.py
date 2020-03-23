@@ -12,7 +12,7 @@ class OrderCreateForm(forms.ModelForm):
         self.fields['phone'].label = 'Telefono'
         self.fields['address'].label = 'Dirección'
         self.fields['send'].label = 'Enviar a domilio ($2000)'
-        self.fields['address'].widget.attrs.update(placeholder='danos tu direccion  para la entrega', required=False)
+        self.fields['address'].widget.attrs.update(placeholder='Dirección para la entrega', required=False)
 
     class Meta:
         model = Order
