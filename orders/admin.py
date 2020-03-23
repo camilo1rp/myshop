@@ -11,9 +11,9 @@ raw_id_fields = ['product']
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', 'first_name', 'last_name', 'email',
-                    'address', 'paid', 'delivered',
+                'address', 'paid', 'send',
                     'created', 'updated']
 
-    list_editable = ['paid', 'delivered']
+    list_editable = ['paid', 'send']
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]

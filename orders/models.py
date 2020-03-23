@@ -5,18 +5,17 @@ from shop.models import Product
 
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50, verbose_name="Nombre")
+    last_name = models.CharField(max_length=50, verbose_name="Apellido")
     email = models.EmailField(null=True, blank=True)
-    phone = models.BigIntegerField()
-    address = models.CharField(max_length=250, null=True, blank=True)
+    phone = models.BigIntegerField(verbose_name="telefono")
+    address = models.CharField(max_length=250, null=True, blank=True, verbose_name="Dirección")
     #postal_code = models.CharField(max_length=200)
     #city = models.CharField(max_length=100)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-    send = models.BooleanField(default=True)
-    paid = models.BooleanField(default=False)
-    delivered = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True, verbose_name="creado")
+    updated = models.DateTimeField(auto_now=True, verbose_name="actualizado")
+    send = models.BooleanField(default=True, verbose_name="entregado")
+    paid = models.BooleanField(default=False, verbose_name="pagado")
 
     class Meta:
         ordering = ('-created',)
