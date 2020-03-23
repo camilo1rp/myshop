@@ -14,7 +14,7 @@ class Order(models.Model):
     #city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True, verbose_name="creado")
     updated = models.DateTimeField(auto_now=True, verbose_name="actualizado")
-    send = models.BooleanField(default=True, verbose_name="entregado")
+    send = models.BooleanField(default=False, verbose_name="entregado")
     paid = models.BooleanField(default=False, verbose_name="pagado")
 
     class Meta:
