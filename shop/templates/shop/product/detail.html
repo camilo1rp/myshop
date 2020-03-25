@@ -20,6 +20,8 @@
         <form action="{% url 'cart:cart_add' product.id %}" method="POST">
             {{form.quantity.label}}:&nbsp;&nbsp;&nbsp;
             {{form.quantity}}&nbsp;&nbsp;&nbsp;&nbsp;
+            {{form.color.label}}:&nbsp;&nbsp;&nbsp;
+            {{form.color}}&nbsp;&nbsp;&nbsp;&nbsp;
             {% csrf_token %}
             <input type="submit" class="btn btn-primary btn-lg p-1" value="Agregar a carrito">
         </form>
